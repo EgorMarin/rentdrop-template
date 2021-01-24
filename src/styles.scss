@@ -1,0 +1,212 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+.ant-layout {
+  background: #F6F7FB !important;
+
+  &-sider-children {
+    overflow: hidden;
+    display: flex;
+  }
+}
+
+.ant-menu {
+  padding: 150px 0 40px 20px !important;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    overflow: visible !important;
+    height: 50px !important;
+    transition: none !important;
+
+    &:last-child {
+      margin-top: auto;
+    }
+
+    &-selected {
+      background-color: #F6F7FB !important;
+      position: relative;
+      border-top-left-radius: 25px !important;
+      border-bottom-left-radius: 25px !important;
+    
+      &:before {
+        position: absolute;
+        right: 0;
+        top: -36px;
+        content: '';
+        background-image: url('assets/images/selected-top.svg');
+        background-size: 37px 37px;
+        height: 37px;
+        width: 37px;
+      }
+    
+      &:after {
+        position: absolute !important;
+        right: -0.5px !important;
+        top: 50px !important;
+        content: '' !important;
+        background-image: url('assets/images/selected-bottom.svg');
+        background-size: 37px 37px;
+        height: 37px;
+        width: 37px;
+        transition: none !important;
+      }
+    }
+  }
+}
+
+.steps-wrapper {
+  padding: 200px 0 0 35px;
+
+  .ant-steps-item {
+    .ant-steps-item-title {
+      color: #83B6BC !important;
+    }
+  }
+
+  .ant-steps-item-finish {
+    .ant-steps-item-icon {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background-color: transparent;
+    }
+  }
+
+  .ant-steps-finish-icon {
+    svg {
+      fill: #fff !important;
+    }
+  }
+
+  .ant-steps-item-active {
+    position: relative;
+
+    &:after {
+      position: absolute !important;
+      right: -43px !important;
+      top: -8px !important;
+      content: '' !important;
+      background-image: url('assets/images/active-step-right.svg');
+      background-size: 8px 42px ;
+      height: 42px;
+      width: 8px;
+    }
+
+    .ant-steps-item-icon {
+      background-color: #FFFFFF;
+      border: none;
+      span {
+        color: #5E8D93 !important;
+      }
+    }
+
+    .ant-steps-item-title {
+      color: #FFFFFF !important;
+    }
+  }
+
+  .ant-steps-item-wait {
+    .ant-steps-item-icon {
+      background-color: #83B6BC;
+      border: none;
+      span {
+        color: #FFFFFF !important;
+      }
+    }
+  }
+}
+
+
+.ant-modal {
+
+  &-body {
+    padding: 40px 10px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-content {
+    border-radius: 20px;
+    position: relative;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    
+  
+    .image {
+      background-image: url('./assets/images/modal-1.svg');
+      background-size: 217px 178px;
+      width: 217px;
+      height: 178px;
+      margin-bottom: 30px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 33px;
+      color: #000000;
+      margin-bottom: 12px;
+    }
+
+    .text-content {
+      text-align: center;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 23px;
+      color: #000000;
+    }
+  }
+
+  &-close-x {
+    height: 0px !important;
+    width: 0px !important;
+
+    .modal-close-icon {
+      position: absolute;
+      top: 10px;
+      right: 55px;
+      width: 45px;
+      height: 45px;
+      background: #F5F5F5;
+      position: relative;
+      border-radius: 50%;
+  
+      &:after {
+        position: absolute;
+        right: 12px;
+        top: 13px;
+        content: '';
+        background-image: url('assets/images/modal-close-icon.svg');
+        background-size: 19px 18px;
+        height: 18px;
+        width: 19px;
+      }
+    }
+  }
+  
+}
+
+
+
+
+
+
