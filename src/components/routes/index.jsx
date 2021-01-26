@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Modal } from 'antd'
 import { Route } from 'react-router-dom'
+import ButtonComponent from '../common/Button'
 
 const Routes = () => {
   const [modalVisible, setModalVisible] = useState(false)
@@ -25,8 +26,16 @@ const Routes = () => {
                 <div className="image" /> 
                 <div className="title">All Set</div>
                 <div className="text-content">You have successfully added Property details</div>
+                <ButtonComponent className='mb-15'>
+                  Yes, I will do it later
+                </ButtonComponent>
+                <ButtonComponent type="text">Cancel</ButtonComponent>
+                <ButtonComponent type="default">Cancel</ButtonComponent>
+                <ButtonComponent hasCircle={true}>Dashboard</ButtonComponent>
+                <ButtonComponent type="default" hasPlus={true}>Add More units</ButtonComponent>
               </div>
             </Modal>
+            
           </>
         )} 
       />

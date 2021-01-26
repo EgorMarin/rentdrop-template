@@ -12,6 +12,121 @@ code {
     monospace;
 } */
 
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+// ----------- Button ------------ //
+.ant-btn-primary {
+  background-color: #41A58D;
+  border-color:  #41A58D;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 1px;
+
+  &:hover, &:focus {
+    background-color: #318d77;
+    border-color:   #318d77;
+  }
+}
+
+.ant-btn-text {
+  color: #606060;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 1px;
+}
+
+.btn-default {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 1px;
+  border-color: #18314F;
+
+  &:hover, &:focus {
+    color: #162538;
+    background: #fff;
+    border-color: #162538;
+  }
+}
+
+.btn-primary--blue {
+  background-color: #5E8D93;
+  border-color:   #5E8D93;
+
+  &:hover, &:focus {
+    background-color: #517a80;
+    border-color:   #517a80;
+  }
+}
+
+.ant-btn-round.ant-btn-lg {
+  padding: 6.4px 30px
+}
+
+.btn-circle {
+  position: relative;
+  padding-right: 18px;
+
+  &:before {
+    position: absolute;
+    right: -19px;
+    top: -20.5px;
+    content: '';
+    background-image: url('assets/images/btn-circle.svg');
+    background-size: 28px 28px;
+    height: 28px;
+    width: 28px;
+  }
+
+  &:after {
+    position: absolute;
+    right: -12.5px;
+    top: -13px;
+    content: '';
+    background-image: url('assets/images/arrows.svg');
+    background-size: 13px 13px;
+    height: 13px;
+    width: 13px;
+  }
+}
+
+.btn-plus {
+  position: relative;
+  padding-right: 18px;
+
+  &:before {
+    position: absolute;
+    color: #0C062E;
+    right: -19px;
+    top: -20.5px;
+    content: '';
+    background-image: url('assets/images/btn-circle-blue.svg');
+    background-size: 28px 28px;
+    height: 28px;
+    width: 28px;
+  }
+
+  &:after {
+    position: absolute;
+    right: -10.3px;
+    top: -11.5px; 
+    content: '';
+    background-image: url('assets/images/btn-plus.svg');
+    background-size: 9px 9px;
+    height: 9px;
+    width: 9px;
+  }
+}
+// ---------------------------- //
+
 .ant-layout {
   background: #F6F7FB !important;
 
@@ -133,7 +248,7 @@ code {
 .ant-modal {
 
   &-body {
-    padding: 40px 10px !important;
+    padding: 40px 10px 20px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,6 +288,7 @@ code {
       font-size: 18px;
       line-height: 23px;
       color: #000000;
+      margin-bottom: 30px;
     }
   }
 
