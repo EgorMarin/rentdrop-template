@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button } from 'antd'
 
-const ButtonComponent = ({ 
-  children, className, type = "primary", shape = "round", size="large", hasCircle = false, hasPlus = false
+export const ButtonComponent = ({ 
+  children, onClick, className, type = "primary", shape = "round", size="large", hasCircle = false, hasPlus = false
 }) => {
 
   if (type === 'default') {
@@ -10,12 +10,10 @@ const ButtonComponent = ({
   }
 
   return (
-    <Button className={className} type={type} shape={shape} size={size}>
+    <Button onClick={onClick} className={className} type={type} shape={shape} size={size}>
       {children}
       {hasCircle && <span className="btn-circle"/>}
       {hasPlus && <span className="btn-plus"/>}
     </Button>
   )
 }
-
-export default ButtonComponent
