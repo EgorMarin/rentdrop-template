@@ -36,7 +36,7 @@ const Routes = () => {
   return (
     <div>
       <Route exact path="/home" render={() => (
-        <>
+        <div className="container">
           <div style={{ fontWeight: 400, fontSize: 22, lineHeight: '27px' }}>Hi, Welcome to</div>
           <div style={{ fontWeight: 700, fontSize: 32, lineHeight: '42px' }}>Rentdrop</div>
           <Button type="primary" onClick={() => setModalVisible(true)}>Open modal</Button>
@@ -76,11 +76,11 @@ const Routes = () => {
             }}
             dataSource={data}
             renderItem={item => (
-              <List.Item style={{background: '#FFFFFF', padding: 0, borderBottom: 'none', maxWidth: '1000px', borderRadius: '6px', height: 50, display: 'flex', marginBottom: '10px'}} key={item.title}>
-                <div style={{ width: '7%', height: '100%', background: '#F8FFEE', borderRadius: '6px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <List.Item className="list__item" key={item.title}>
+                <div className="number-block" style={{ width: '7%' }}>
                   <div>101</div>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', width: '93%', height: '40px' }}>
+                <div className="wrapper" style={{ width: '93%' }}>
                   <div className="property" style={{ width: '28%' }}>
                     <div className="property__title">Hereford St</div>
                     <div className="property__sub-title">302 Hereford St,Massachusetts, 02210 Hereford St,Massachusetts, 0221</div>
@@ -106,11 +106,11 @@ const Routes = () => {
           {/* <List
             dataSource={data}
             renderItem={item => (
-              <List.Item style={{background: '#FFFFFF', padding: 0, borderBottom: 'none', maxWidth: '1000px', borderRadius: '6px', height: 50, display: 'flex', marginBottom: '10px'}} key={item.title}>
-                <div style={{ width: '7%', height: '100%', background: '#F8FFEE', borderRadius: '6px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <List.Item className="list__item" key={item.title}>
+                <div  className="number-block" style={{ width: '7%' }}>
                   <div>101</div>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', width: '93%', height: '40px' }}>
+                <div className="wrapper" style={{ width: '93%' }}>
                   <div className="property" style={{ width: '28%' }}>
                     <div className="property__title">Hereford St</div>
                     <div className="property__sub-title">302 Hereford St,Massachusetts, 02210 Hereford St,Massachusetts, 0221</div>
@@ -130,30 +130,78 @@ const Routes = () => {
             )}
           /> */}
 
-          <List
+          {/* <List
             dataSource={data}
             renderItem={item => (
-              <List.Item style={{background: '#FFFFFF', padding: 0, borderBottom: 'none', maxWidth: '900px', borderRadius: '6px', height: 70, display: 'flex', marginBottom: '10px'}} key={item.title}>
-                <div style={{ display: 'flex', alignItems: 'center', height: '60px', width: '100%' }}>
-                  <div className="property" style={{ width: '37%' }}>
-                      <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                      <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        <div style={{ fontWeight: 700, fontSize: 18, marginBottom: '5px' }}>Cody Fisher</div>
-                        <div style={{ fontWeight: 400, fontSize: 12 }}>codyfisher@gmail.com</div>
-                      </div>
+              <List.Item className="list__item list__item--lg" key={item.title}>
+                <div className="wrapper" style={{ width: '100%' }}>
+                  <div className="list-avatar" style={{ width: '10%' }}>
+                    <Avatar 
+                      style={{ color: '#f56a00', backgroundColor: '#fde3cf' }}
+                      size={54}
+                    />
+                    <span className="list-avatar__label">#101</span>
                   </div>
-                  <div className="teenant" style={{ width: '35%' }}>
-                    <div className="teenant__title">Benjamin Keller</div>
-                    <div className="teenant__sub-title">Benjaminlandlord@gmail.com </div>
+                  <div className="contacts" style={{ width: '31%' }}>
+                    <div className="contacts__title">Cody Fisher</div>
+                    <div className="contacts__sub-title">codyfisher@gmail.com</div>
                   </div>
-                  <div className="lease" style={{ width: '28%' }}>
-                    <div className="lease__title">23 May 2020</div>
+                  <div className="lease-date" style={{ width: '37%' }}>
+                    <div className="lease-date__title">Hereford St</div>
+                    <div className="lease-date__sub-title">Lease Date : 2Jan 2020 - 2Jan 2131</div>
+                  </div>
+                  <div className="rent" style={{ width: '22%' }}>
+                    <div className="rent__title">Monthly Rent</div>                    
+                    <div className="rent__sub-title">$2500</div>
                   </div>
                 </div>
               </List.Item>
             )}
-          />
-        </>
+          /> */}
+
+          {/* <List 
+            grid={{
+              gutter: 16,
+              xs: 1,
+              sm: 1,
+              md: 2,
+              lg: 2,
+              xl: 3,
+              xxl: 3,
+            }}
+            dataSource={data}
+            renderItem={item => (
+              <List.Item className="list__item list__item--square" key={item.title}>
+                <div className="wrapper">
+                  <div className="number">101</div>
+                  <div className="title">Hereford St</div>
+                  <div className="sub-title">302 Hereford St,Massachusetts, 02210 </div>
+                  <div className="lease-block">
+                    <div className="lease-block__left">
+                      <div className="lease-block__title">Lease Date</div>
+                      <div className="lease-block__date">05/01/20 to 03/09/21</div>
+                    </div>
+                    <div className="lease-block__right">
+                      <div className="lease-block__price">$2500</div>
+                      <div className="lease-block__month">/ Month</div>
+                    </div>
+                  </div>
+                  <div className="info-block">
+                    <Avatar 
+                      style={{ color: '#f56a00', backgroundColor: '#fde3cf' }}
+                      size={40}
+                    />
+                    <div className="info-block__info">
+                      <div className="info__title">Benjamin Keller</div>
+                      <div className="info__sub-title">Benjaminlandlord@gmail.com</div>
+                    </div>
+                  </div>
+                </div>
+              </List.Item>
+            )}
+          /> */}
+
+        </div>
       )} 
       />
     </div>

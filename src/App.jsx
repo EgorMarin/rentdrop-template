@@ -22,7 +22,7 @@ const App = () => {
         <Layout>
           <Sidebar />
           <Layout style={{ marginLeft: 200 }}>
-            <Content style={{ padding: '105px 0px 0px 90px', overflow: 'initial', minHeight: '100vh' }}>
+            <Content style={{ overflow: 'initial', minHeight: '100vh' }}>
               <Routes />
             </Content>
             <DrawerComponent />
