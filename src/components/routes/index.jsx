@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Modal, List, Divider, Pagination, Avatar } from 'antd'
+import { Modal, List, Divider, Pagination, Avatar, Switch, Form, Input, Checkbox } from 'antd'
 import { Route } from 'react-router-dom'
-import { ButtonComponent as Button } from '../common/Button'
+import { ButtonComponent as Button } from '../common/Button/index'
 
 const Routes = () => {
   const [modalVisible, setModalVisible] = useState(false)
@@ -32,6 +32,10 @@ const Routes = () => {
       setData([...data].filter(item => item.title === 'Title 4'))
     }
   }, [filter])
+  
+  const onSubmit = (values) => {
+    console.log(values);
+  }
 
   return (
     <div>
@@ -123,7 +127,9 @@ const Routes = () => {
                     <div className="lease__title">23 May 2020</div>
                   </div>
                   <div className="lease" style={{ width: '25%' }}>
-                    <div className="lease__title">23 May 2029</div>
+                    <div className="lease__status">
+                      Review Application
+                    </div>
                   </div>
                 </div>
               </List.Item>
@@ -200,6 +206,228 @@ const Routes = () => {
               </List.Item>
             )}
           /> */}
+
+
+          {/* LandLord Account Page */}
+
+            {/* <div className="account-card">
+              <div className="header">
+                <div className="header__fullname">
+                  <div className="fullname"></div>
+                  <div className="email"></div>
+                </div>
+              </div>
+              Form
+              <div className="payment-block">
+                <div className="payment-block__title">Account Payment Information</div>
+                <div className="payment-block__sub-title">Bank Account Details</div>
+
+                <div className="add-btn">+   Add Bank Accont</div>
+              </div>
+            </div> */}
+          
+          {/* End */}
+
+          {/* LandLord Setting Page */}
+
+            {/* <div className="settings-card">
+              <div className="settings-card__title">Notification Settings</div>
+              <Form
+                onFinish={onSubmit}
+                className="form"
+              >
+                <div className="form-item">
+                  <div className="form-item-title">Notify when payment is made</div>
+                  <Form.Item name="when_payment_is_made">
+                    <Switch />
+                  </Form.Item>
+                </div>
+                <div className="form-item">
+                  <div className="form-item-title">Notify when payment overdue</div>
+                  <Form.Item name="when_payment_is_made">
+                    <Switch />
+                  </Form.Item>
+                </div>
+                <div className="form-item">
+                  <div className="form-item-title">Notify when payment is received</div>
+                  <Form.Item name="when_payment_is_made">
+                    <Switch />
+                  </Form.Item>
+                </div>
+              </Form>
+            </div>
+
+            <div className="settings-card">
+              <div className="settings-card__title">Tenant Settings</div>
+              <Form
+                onFinish={onSubmit}
+                className="form"
+              >
+                <div className="form-item">
+                  <div className="form-item__input-block">
+                    <div className="input-block__title">Notify Tanent when</div>
+                    <Form.Item name="days_before">
+                      <Input />
+                    </Form.Item>
+                    <div className="input-block__title">Days Before rent is due</div>
+                  </div>
+                  <Form.Item name="before_rent_is_due">
+                    <Switch />
+                  </Form.Item>
+                </div>
+                <div className="form-item">
+                  <div className="form-item__input-block">
+                    <div className="input-block__title">Notify Tanent every</div>
+                    <Form.Item name="notify_every">
+                      <Select />
+                    </Form.Item>
+                    <div className="input-block__title">when Payment is overdue</div>
+                  </div>
+                  <Form.Item name="before_rent_is_due">
+                    <Switch />
+                  </Form.Item>
+                </div>
+              </Form>
+            </div> */}
+
+          {/* End */}
+
+          {/* Tenant Home Page */}
+
+            {/* <div className="upcoming-payment-card">
+              <div className="upcoming-payment-card__title">Upcoming Payments</div>
+              <div className="upcoming-payment-card__body">
+                <div className="body-item">
+                  <div className="body-item__info">
+                    <div className="info-column">
+                      <div className="info-column__title">Rent Due in</div>
+                      <div className="info-column__value">14 Days</div>
+                    </div>
+                    <div className="info-column">
+                      <div className="info-column__title">Rent Due in</div>
+                      <div className="info-column__value">14 Days</div>
+                    </div>
+                  </div>
+                  <div className="body-item__btn">
+                    <Button>Make Payment</Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="auto-payment-card">
+              <div className="auto-payment-card__icon" />
+              <div className="auto-payment-card__title">Auto Payment</div>
+              <div className="auto-payment-card__text">Turn on automatic payment</div>
+              <Switch />
+            </div>
+
+            <div className="apartments-card">
+              <div className="apartments-card__header">
+                <div className="header-title">Peace apartments</div>
+                <div className="header-number">101</div>
+              </div>
+              <div className="apartments-card__body">
+                <div className="body-items">
+                  <div className="item-block">
+                    <div className="item-block__title">Address</div>
+                    <div className="item-block__address-text">
+                      302 Hereford St, Boston, Massachusetts 02210
+                    </div>
+                  </div>
+                  <div className="item-block">
+                    <div className="item-block__title">Lease Date</div>
+                    <div className="item-block__lease-text">
+                      <span>From </span>
+                      05/01/20
+                    </div>
+                  </div>
+                  <div className="item-block">
+                    <div className="item-block__title">Rent Amount</div>
+                    <div className="item-block__rent-text">
+                      $2500 <span>/ Month</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> */}
+
+          {/* End */}
+
+          {/* Tenant Setting Page */}
+
+            <div className="notification-card">
+              <div className="notification-card__title">Notification Settings</div>
+              <div className="notification-card__sub-title">What type of notifications do i want to recieve?</div>
+              <div className="notification-card__switch-block">
+                <div className="switch-item">
+                  <div className="switch-item__title">In-app</div>
+                  <Switch />
+                </div>
+                <div className="switch-item">
+                  <div className="switch-item__title">SMS</div>
+                  <Switch />
+                </div>
+                <div className="switch-item">
+                  <div className="switch-item__title">Email</div>
+                  <Switch />
+                </div>
+              </div>
+            </div>
+
+            <div className="tenant-setting-card">
+              <div className="tenant-setting-card__title">Tenant Settings</div>
+              <div className="tenant-setting-card__switch-block">
+                <div className="switch-item__title">Notify me when rent is paid</div>
+                <Switch />
+              </div>
+              <div className="tenant-setting-card__switch-block">
+                <div className="switch-item__title">Notify me when payment overdue</div>
+                <Switch />
+              </div>
+              <div className="tenant-setting-card__switch-block">
+                <div className="input-block__item">
+                  <div className="item__title">Notify me</div>
+                  <Input 
+                    className="item__input"
+                  />
+                  <div className="item__title">day(s) before rent is due</div>
+                </div>
+                <Switch />
+              </div>
+              <div className="tenant-setting-card__switch-block">
+                <div className="switch-item__title">Notify me when my landlord sends me a message</div>
+                <Switch />
+              </div>
+            </div>
+
+            <div className="tenant-setting-card">
+              <div className="tenant-setting-card__switch-block">
+                <div className="input-block__item">
+                  <div className="item__title">Notify me</div>
+                  <Input
+                    className="item__input"
+                  />
+                  <div className="item__title">day(s) before rent is due</div>
+                </div>
+                <Switch />
+              </div>
+              <div className="tenant-setting-card__autopayment-block">
+                <div className="input-item">
+                  <div className="input-item__title">Autopayment amount</div>
+                  <Input />
+                </div>
+                <div className="checkbox-item">
+                  <Checkbox />
+                  <div className="checkbox-item__title">Full outstanding balance</div>
+                </div>
+              </div>
+              <div className="back-account-block">
+                <div className="back-account-block__title">Bank Account Details</div>
+                <Button style={{ color: '#5E8D93', background: '#F8FFEE' }}>+   Add another payment method</Button>
+              </div>
+            </div>
+          {/* End */}
 
         </div>
       )} 
