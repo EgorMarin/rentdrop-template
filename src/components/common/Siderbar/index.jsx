@@ -26,36 +26,44 @@ const Sidebar = () => {
         left: 0,
       }}
     >
-      {/* <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
+      <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
+        <span className="menu-logo"/>
         <Menu.Item key="1" >
-          nav 1
+          <span className="menu-icon menu-icon--home"/>
+          Home
         </Menu.Item>
         <Menu.Item key="2">
-          nav 2
+          <span className="menu-icon menu-icon--property"/>
+          Property
         </Menu.Item>
         <Menu.Item key="3">
-          nav 3
+          <span className="menu-icon menu-icon--unit"/>
+          Unit Details
         </Menu.Item>
         <Menu.Item key="4">
-          nav 4
+          <span className="menu-icon menu-icon--tenants"/>
+          Tenants
         </Menu.Item>
         <Menu.Item key="5">
-          nav 5
+          <span className="menu-icon menu-icon--account"/>
+          Account
         </Menu.Item>
         <Menu.Item key="6">
-          nav 6
+          <span className="menu-icon menu-icon--applications"/>
+          Applications
         </Menu.Item>
         <Menu.Item key="7" >
-          nav 7
+          <span className="menu-icon menu-icon--settings"/>
+          Settings
         </Menu.Item>
-      </Menu> */}
-      <div className="steps-wrapper">
+      </Menu>
+      {/* <div className="steps-wrapper">
         <Steps size="small" current={currentStep} onChange={onStepChange} direction="vertical">
           <Step title="Property" />
           <Step title="Unit Details" />
           <Step title="Add Lease" />
         </Steps>
-      </div>
+      </div> */}
     </Sider>
   )
 }
